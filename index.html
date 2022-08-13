@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="validation.js" defer></script>
+    <title>Everlytics</title>
+  </head>
+  <body>
+    <center>
+      <div class="container" style="margin-top: 70px">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <form class="form form-control form-bordered border-dark">
+              <div class="input-group" style="margin-top: 40px">
+                <label class="input-group-label" for="inputState"
+                  >Select Your Source:
+                </label>
+                <div class="col-md-7" style="margin-left: 120px">
+                  <select id="inputState" class="form form-control text-center">
+                    <option selected>Google Cloud Storage</option>
+                    <option>...</option>
+                  </select>
+                </div>
+              </div>
+              <br />
+              <div class="input-group col-md-8">
+                <label class="input-group-label"
+                  >Provide a name for pipeline:
+                </label>
+                <input
+                  id="pn"
+                  style="margin-left: 50px"
+                  type="text"
+                  class="form form-control text-center"
+                  placeholder="e.g.,cust_shop-energy_gkatewaay001"
+                  value=""
+                />
+              </div>
+              <div id="np" style="color:red;visibility:hidden;">
+                <a>
+                  Minimum length 5
+                  No special characters
+                  Cannot start with '-', '_', '+'
+                </a>
+               </div>
+              <br />
+              <div class="input-group">
+                <label class="input-group-label">GCS project name:</label>
+                <input
+                  id="pi"
+                  style="margin-left: 120px"
+                  type="text"
+                  class="form form-control text-center"
+                  placeholder="project_id"
+                  value=""
+                />
+              </div>
+              <div id="ip" style="color:red;visibility:hidden;">
+                <a>
+                  Minimum length 5
+                  No special characters
+                  Cannot start with '-', '_', '+'
+                </a>
+               </div>
+              <br />
+              <div class="input-group">
+                <label class="input-group-label">GCS bucket name:</label>
+                <input
+                  id="gbn"
+                  style="margin-left: 120px"
+                  type="text"
+                  class="form form-control text-center"
+                  placeholder="gs://your-bucket"
+                  value=""
+                />
+              </div>
+              <div id="gnb" style="color:red;visibility:hidden;">
+                <a>
+                  Minimum length 5  
+                  No special characters
+                  Cannot start with '-', '_', '+'
+                </a>
+               </div>
+              <br />
+              <div class="input-group">
+                <label class="input-group-label"
+                  >Input Cloud Storage File(s):
+                </label>
+                <input
+                  id="ics"
+                  style="margin-left: 50px"
+                  type="text"
+                  value=""
+                  class="form form-control text-center"
+                  placeholder="GCS location (gs://your-bucket/your-files/01.csv)"
+                />
+              </div>
+              <div id="isc" style="color:red;visibility:hidden;">
+                <a>
+                  Minimum length 5
+                  No special characters
+                  Cannot start with '-', '_', '+'
+                </a>
+               </div>
+              <br />
+              <div class="input-group">
+                <label class="input-group-label">GCS credentials: </label>
+                <input
+                  id="gsc"
+                  style="margin-left: 130px"
+                  type="password"
+                  value=""
+                  class="form form-control text-center"
+                />
+              </div>
+              <div id="gcs" style="color:red;visibility:hidden;">
+                  <a>
+                    Minimum length 5
+                    No special characters
+                    Cannot start with '-', '_', '+'
+                  </a>
+                 </div>
+              <br />
+              <div class="input-group">
+                <label class="input-group-label">Run Every:</label>
+                <input
+                  id="re"
+                  style="margin-left: 170px"
+                  type="text"
+                  value=""
+                  class="form form-control text-center"
+                  placeholder="(in minutes)"
+                />
+              </div>
+                 <div id="er" style="color:red;visibility:hidden;">
+                  <a>
+                    Minimum length 5
+                    No special characters
+                    Cannot start with '-', '_', '+'
+                </div>
+              <br />
+              <center>
+                <button class="btn btn-primary" id="create">Create</button>
+                <button class="btn btn-primary" id="cancel">Cancel</button>
+              </center>
+            </form>
+          </div>
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
