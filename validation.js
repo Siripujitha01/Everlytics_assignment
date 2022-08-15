@@ -13,6 +13,9 @@ function validate(s,s1) {
   ) {
     document.getElementById(s1).style.visibility="visible"
   }
+  else{
+    document.getElementById(s1).style.visibility="hidden"
+  }
 }
 create.addEventListener("click", function (e) {
   e.preventDefault();
